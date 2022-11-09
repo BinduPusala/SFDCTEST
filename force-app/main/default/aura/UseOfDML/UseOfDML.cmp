@@ -1,0 +1,40 @@
+<aura:component controller="CalculatorController">
+    <aura:attribute name="Client" type="Account" default="{'Name' : ' ',
+                                                          'Client_Code__c' : '',
+                                                          'Project_Cost__c' : '',
+                                                          'Employee_Count__c' : ''}"/>
+    <div class="slds-page-header">
+  <div class="slds-page-header__row">
+    <div class="slds-page-header__col-title">
+      <div class="slds-media">
+        <div class="slds-media__figure">
+          <span class="slds-icon_container slds-icon-standard-opportunity" title="opportunity">
+                  <span class="slds-assistive-text">opportunity</span>
+          </span>
+        </div>
+        <div class="slds-media__body">
+          <div class="slds-page-header__name">
+            <div class="slds-page-header__name-title">
+              <h1>
+                <span class="slds-page-header__title slds-truncate " title="IT Company Client Portal">IT Company Client Portal</span>
+              </h1>
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    <lightning:input label="Name" placeholder ="Enter the Name" value="{!v.Client.Name}" required="true" aura:id="Name"/>
+    <br></br>
+    <lightning:input label="Client Code" placeholder ="Enter the Client Code" value="{!v.Client.Client_Code__c}" aura:id="CCode"/>
+	<br></br>
+    <lightning:input label="Project Cost" placeholder ="Enter the Project Cost" value="{!v.Client.Project_Cost__c}" aura:id="ProCost"/>
+	<br></br>
+    <lightning:input label="Employee Count" placeholder ="Enter the Employee Count" value="{!v.Client.Employee_Count__c}" aura:id="EmpCount"/>
+	<br></br>
+    
+    <lightning:button label="Add" onclick="{!c.Add}"/>
+    <lightning:button label="Update" onclick="{!c.Update}"/>
+</aura:component>

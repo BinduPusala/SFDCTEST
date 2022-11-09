@@ -1,0 +1,6 @@
+<aura:component >
+    <ui:inputtext label="First Name"  aura:id="First Name"/><br/>
+    <ui:inputtext label="Last Name"  aura:id="Last Name"/><br/>
+    <ui:inputtext label="Gender(M/F)" aura:id="Gender"/><br/>
+    <ui:button label="Submit" press="{!c.callMe}"/>
+</aura:component>

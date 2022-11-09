@@ -1,0 +1,11 @@
+<aura:component >  
+    <aura:attribute name="Content" type="Case[]"/>
+    <aura:attribute name="Columns" type="List"/>
+    <div>
+	<lightning:card title="Employee Portal">
+    <lightning:button label="Open Cases" onclick="{!c.open}"/>
+    <lightning:button label="Inprogress Cases" onclick="{!c.Inprogress}"/>
+    <lightning:button label="Closed Cases" onclick="{!c.Close}"/>
+    </lightning:card>
+        </div>
+</aura:component>

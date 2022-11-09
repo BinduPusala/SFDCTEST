@@ -1,0 +1,22 @@
+<aura:component controller="CalculatorController" >
+    <!--ui:inputtext label="First Name" aura:id = "FirstName" /><br/>
+    <ui:inputtext label="Last Name" aura:id = "LastName" /><br/>
+    <ui:inputtext label="Gender(M/F)" aura:id = "Gender" /><br/>
+    
+    <ui:button label= "Submit" press="{!c.callMe}"/-->
+    <aura:attribute name="ShowButton" type="Boolean" default ="false"/>
+    
+    <lightning:input name="FirstName" label="FirstName" aura:id = "FirstName" />
+     <lightning:input name="LastName" label="LastName" aura:id = "LastName" />
+    <lightning:input name="Gender" label="Gender(M/F)" aura:id = "Gender" onchange="{!c.onchangeGender}"/>'
+    <aura:if isTrue="{!v.ShowButton}">
+   			<lightning:button variant="brand" label="Submit" title="Submit" onclick="{! c.callMe}" class="button1"/>
+    </aura:if>
+    
+    <lightning:input label="First Number" placeHolder="Enter First Number" aura:id="FirstNumber"/>
+    <lightning:input label="Second Number" placeHolder="Enter Second Number" aura:id="SecondNumber"/>
+    <lightning:button variant="brand" label="Sum" title="Sum" onclick = "{!c.sumMethod}"/>
+    <lightning:button variant="brand" label="Multi" title="Multi" onclick = "{!c.multiMethod}"/>
+    <lightning:button variant="brand" label="Sub" title="Sub" onclick = "{!c.subMethod}"/>
+    <lightning:button variant="brand" label="Div" title="Div" onclick = "{!c.divMethod}"/>
+</aura:component>

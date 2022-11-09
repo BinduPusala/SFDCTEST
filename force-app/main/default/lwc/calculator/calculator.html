@@ -1,0 +1,23 @@
+<template>
+    <div class="slds-n-around_small">
+        <lightning-card title="calulator Demo"  icon-name="custom:custom24">
+            <lightning-input label="Num1" name="num1"
+            placeholder="Input num1 Value.."
+            onchange={onchangehandleevent}> 
+            </lightning-input>
+            <lightning-input label="Num2" name="num2"
+            placeholder="Input num2 Value.."
+            onchange={onchangehandleevent}> 
+            </lightning-input>
+            <lightning-button variant="brand" label="Add" onclick={sum}> </lightning-button>
+            &nbsp;
+            <lightning-button variant="brand" label="Diff" onclick={sub}> </lightning-button>
+            &nbsp;
+            <lightning-button variant="brand" label="Mul" onclick={mul}> </lightning-button>
+            &nbsp;
+            <lightning-button variant="brand" label="Div" onclick={div}> </lightning-button>
+            &nbsp;
+        </lightning-card>
+    </div>
+    
+</template>

@@ -1,0 +1,17 @@
+<aura:component controller="IterationController" >
+    <aura:attribute name="mapofdata" type="object"/>
+	<aura:iteration items="IBM,Capgemini,Oracle,Dell" var="item">
+       {!item}<br></br>
+    </aura:iteration>
+        <aura:iteration items="1,2,3,4,5" var="item">
+            <meter value="{!item/5}"/><br></br>
+    </aura:iteration>
+    <lightning:button name="get Map" label="Get Map" onclick="{!c.getMapValue}"/>
+	<aura:iteration items="{!v.mapofdata}" var="mapKey">
+    	<Strong><br></br> {!mapKey.key}</Strong><br></br>
+        <aura:iteration items="{!mapKey.value}" var="val">
+        	{!val}<br></br>
+        </aura:iteration>
+    
+    </aura:iteration> 
+</aura:component>

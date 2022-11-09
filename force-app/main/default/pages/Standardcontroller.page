@@ -1,0 +1,16 @@
+<apex:page standardController="Account" extensions="myExten"  >
+  {!greeting}
+    <apex:form >
+        <apex:pageBlock >
+        <apex:pageBlockSection >
+            <apex:inputField value="{!Account.Name}"/>
+            <apex:commandButton action="{!Save}" value="SAVE"/>
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+       
+    </apex:form>
+    <apex:detail relatedlist="false"/>
+     <apex:relatedList subject="{!account}" list="contacts"/>
+   
+    
+</apex:page>
